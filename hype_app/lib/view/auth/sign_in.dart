@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hype_app/view/auth/sign_up.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -11,7 +13,7 @@ class SignInPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 450,
+              height: 400,
               width: double.infinity,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -88,7 +90,9 @@ class SignInPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                const  Text("Do you have an account",style: TextStyle(color: Colors.white),),
-                TextButton(onPressed: (){}, child: const Text("Sign up?",style: TextStyle(color: Colors.green)))
+                TextButton(onPressed: (){
+                  Get.to(SignUpPage());
+                }, child: const Text("Sign up?",style: TextStyle(color: Colors.green)))
               ],
             ),
             const Text("or",style: TextStyle(color: Colors.white,fontSize: 20)),
