@@ -1,20 +1,117 @@
 import 'package:flutter/material.dart';
 import 'package:hype_app/widgets/app_bar_widget.dart';
-
-import '../../widgets/profile_bottom_sheet.dart';
+import 'package:hype_app/widgets/social_cotinar.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return const  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-                        AppBarWidget() 
+              const AppBarWidget(),
+             
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 80,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text("Total Earnings (INR)",
+                                style: TextStyle(color: Colors.white)),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 18.0,),
+                              child: Container(
+                                alignment: Alignment.center,
+                                height: 30,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                child: Text(
+                                  "Withdraw",style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 8.0),
+                        child: Text("#243735",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 30)),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+             
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.cast_for_education,
+                          color: Colors.white, size: 30)),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.webhook,
+                          color: Colors.white, size: 30)),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.person,
+                          color: Colors.white, size: 30)),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.shopping_bag,
+                          color: Colors.white, size: 30)),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text("Hype Academy",
+                          style: TextStyle(color: Colors.white))),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text("Web",
+                          style: TextStyle(color: Colors.white))),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text("Refer & Earn",
+                          style: TextStyle(color: Colors.white))),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text("Hype Shop",
+                          style: TextStyle(color: Colors.white))),
+                ],
+              ),
+              const SizedBox(height: 10),
+            const   SocialContinerWidget()
+              // Wrap the ListView.builder with a Container or SizedBox to avoid rendering issues
+             
             ],
           ),
         ),

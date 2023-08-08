@@ -18,7 +18,7 @@ class AppBarWidget extends StatelessWidget {
                          
                             context: context, builder: (context) {
                             return Container(
-                                height: 800,
+                                height: double.maxFinite,
                                 color: Colors.grey.shade900,
 
                                 child: Column(
@@ -61,24 +61,33 @@ class AppBarWidget extends StatelessWidget {
                                        onTap: (){},
                                     ),
 
+
+                                    // MaterialButton(
+                                    //   height: 50,
+                                    //   minWidth: double.infinity,
+                                    //   color: Colors.green,
+                                    //   child: Text("Premium "),
+                                    //   onPressed: (){})
+
                                   ],
                                 ),
                             );
                           },);
                         },
                          child: const   CircleAvatar(
+                          radius: 20,
                             backgroundColor: Color.fromARGB(255, 123, 250, 127),
                             child: CircleAvatar(
-                              backgroundImage: AssetImage('image/facebookicon.png'),
+                              backgroundImage: AssetImage('image/profilimg.jpeg'),
                               radius: 18,
                             ),
                           ),
                        ),
-                      const  SizedBox(
-                          height: 50,
-                          width: 50,
-                          child: Image(image: AssetImage('image/facebookicon.png')),
-                        ),
+                      // const  SizedBox(
+                      //     height: 50,
+                      //     width: 50,
+                      //     child: Image(image: AssetImage('image/facebookicon.png')),
+                      //   ),
                         CircleAvatar(
                           backgroundColor: Colors.grey.shade900,
                           child: IconButton(

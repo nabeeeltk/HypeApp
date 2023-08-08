@@ -31,6 +31,8 @@ class _RootpageState extends State<Rootpage> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
         currentIndex: _currentIndex,
+        fixedColor: Colors.white,
+       
         onTap: (index) {
           setState(() {
             _currentIndex = index;
