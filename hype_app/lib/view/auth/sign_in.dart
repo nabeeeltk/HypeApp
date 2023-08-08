@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hype_app/view/auth/sign_up.dart';
+import 'package:hype_app/widgets/root_widget.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -76,7 +77,9 @@ class SignInPage extends StatelessWidget {
                   border: Border.all(color: Colors.green),
                 ),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(Rootpage());
+                  },
                   child: const Text(
                     "Sign in",
                     style: TextStyle(fontSize: 25,color: Colors.white,

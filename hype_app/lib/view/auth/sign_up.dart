@@ -121,7 +121,7 @@ class SignUpPage extends StatelessWidget {
               children: [
                const  Text("Do you have an account",style: TextStyle(color: Colors.white),),
                 TextButton(onPressed: (){
-                  Get.to(SignInPage());
+                  Get.to(const SignInPage());
                 }, child: const Text("Sign up?",style: TextStyle(color: Colors.green)))
               ],
             ),
