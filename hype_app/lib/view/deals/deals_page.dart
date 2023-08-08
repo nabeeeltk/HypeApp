@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hype_app/widgets/app_bar_widget.dart';
 import '../../widgets/listview.dart';
 import '../../widgets/nested_tabbar.dart';
 
@@ -11,40 +12,7 @@ class DealsPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: 40,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const CircleAvatar(
-                        backgroundColor: Color.fromARGB(255, 123, 250, 127),
-                        child: CircleAvatar(
-                          backgroundImage: AssetImage('image/facebookicon.png'),
-                          radius: 18,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 50,
-                        width: 50,
-                        child: Image(image: AssetImage('image/facebookicon.png')),
-                      ),
-                      CircleAvatar(
-                        backgroundColor: Colors.grey.shade900,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.search,
-                            size: 25,
-                          ),
-                          color: const Color.fromARGB(255, 123, 250, 127),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              AppBarWidget(),
               const SizedBox(
                 height: 20,
               ),
