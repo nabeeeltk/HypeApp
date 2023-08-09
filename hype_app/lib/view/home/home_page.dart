@@ -14,7 +14,6 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               const AppBarWidget(),
-             
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
@@ -37,19 +36,20 @@ class HomePage extends StatelessWidget {
                             const Text("Total Earnings (INR)",
                                 style: TextStyle(color: Colors.white)),
                             Padding(
-                              padding: const EdgeInsets.only(right: 18.0,),
+                              padding: const EdgeInsets.only(right: 18.0),
                               child: Container(
                                 alignment: Alignment.center,
                                 height: 30,
                                 width: 100,
                                 decoration: BoxDecoration(
-                                  color: Colors.green,
-                                  borderRadius: BorderRadius.circular(10)
+                                    color: Colors.green,
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: const Text(
+                                  "Withdraw",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
                                 ),
-                                child: Text(
-                                  "Withdraw",style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),),
                               ),
                             )
                           ],
@@ -57,21 +57,22 @@ class HomePage extends StatelessWidget {
                       ),
                       const Padding(
                         padding: EdgeInsets.only(left: 8.0),
-                        child: Text("#243735",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 30)),
+                        child: Text("₹50,480",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold)),
                       )
                     ],
                   ),
                 ),
               ),
-             
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.cast_for_education,
+                      icon: const Icon(Icons.school,
                           color: Colors.white, size: 30)),
                   IconButton(
                       onPressed: () {},
@@ -79,7 +80,7 @@ class HomePage extends StatelessWidget {
                           color: Colors.white, size: 30)),
                   IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.person,
+                      icon: const Icon(Icons.money_off_outlined,
                           color: Colors.white, size: 30)),
                   IconButton(
                       onPressed: () {},
@@ -87,31 +88,34 @@ class HomePage extends StatelessWidget {
                           color: Colors.white, size: 30)),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  TextButton(
-                      onPressed: () {},
-                      child: const Text("Hype Academy",
-                          style: TextStyle(color: Colors.white))),
-                  TextButton(
-                      onPressed: () {},
-                      child: const Text("Web",
-                          style: TextStyle(color: Colors.white))),
-                  TextButton(
-                      onPressed: () {},
-                      child: const Text("Refer & Earn",
-                          style: TextStyle(color: Colors.white))),
-                  TextButton(
-                      onPressed: () {},
-                      child: const Text("Hype Shop",
-                          style: TextStyle(color: Colors.white))),
-                ],
-              ),
+              LayoutBuilder(builder: (context, constraints) {
+                final buttonWidth = constraints.maxWidth / 4;
+
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TextButton(
+                        onPressed: () {},
+                        child: const Text("Hype Academy",
+                            style: TextStyle(color: Colors.white))),
+                    TextButton(
+                        onPressed: () {},
+                        child:
+                            const Text("Web", style: TextStyle(color: Colors.white))),
+                    TextButton(
+                        onPressed: () {},
+                        child: const Text("Refer & Earn",
+                            style: TextStyle(color: Colors.white))),
+                    TextButton(
+                        onPressed: () {},
+                        child: const Text("Hype Shop",
+                            style: TextStyle(color: Colors.white))),
+                  ],
+                );
+              }),
               const SizedBox(height: 10),
-            const   SocialContinerWidget()
+              const SocialContinerWidget(),
               // Wrap the ListView.builder with a Container or SizedBox to avoid rendering issues
-             
             ],
           ),
         ),

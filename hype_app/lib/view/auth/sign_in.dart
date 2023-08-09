@@ -8,18 +8,19 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              height: 400,
+              height: MediaQuery.of(context).size.height * 0.5,
               width: double.infinity,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(40),
-                    bottomLeft: Radius.circular(40)),
+                  bottomRight: Radius.circular(40),
+                  bottomLeft: Radius.circular(40),
+                ),
                 image: DecorationImage(
                   image: AssetImage('image/hypest1.jpg'),
                   fit: BoxFit.cover,
@@ -44,7 +45,7 @@ class SignInPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.only(left: 15,top: 10),
+                        padding: EdgeInsets.only(left: 15, top: 10),
                         child: Text(
                           "Let's\nSign\nYou in.",
                           style: TextStyle(
@@ -59,17 +60,13 @@ class SignInPage extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      
-                     
                     ],
                   ),
                 ),
               ),
             ),
-         
-            
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0),
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -82,64 +79,83 @@ class SignInPage extends StatelessWidget {
                   },
                   child: const Text(
                     "Sign in",
-                    style: TextStyle(fontSize: 25,color: Colors.white,
-                    fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
             ),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               const  Text("Do you have an account",style: TextStyle(color: Colors.white),),
-                TextButton(onPressed: (){
-                  Get.to(SignUpPage());
-                }, child: const Text("Sign up?",style: TextStyle(color: Colors.green)))
+                Text(
+                  "Do you have an account",
+                  style: TextStyle(color: Colors.white),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Get.to(SignUpPage());
+                  },
+                  child: const Text(
+                    "Sign up?",
+                    style: TextStyle(color: Colors.green),
+                  ),
+                )
               ],
             ),
-            const Text("or",style: TextStyle(color: Colors.white,fontSize: 20)),
-          const   SizedBox(height: 10,),
-             Padding(
+            const Text("or", style: TextStyle(color: Colors.white, fontSize: 20)),
+            const SizedBox(height: 10),
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(255, 3, 69, 122)
-                 
+                  color: Color.fromARGB(255, 3, 69, 122),
                 ),
-                child:Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset("image/facebookicon.png",height:50,width: 40,),
-                    const Text("Continue with Facebook",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold))
+                    Image.asset("image/facebookicon.png", height: 50, width: 40),
+                    const Text(
+                      "Continue with Facebook",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    )
                   ],
-                )
+                ),
               ),
             ),
-            SizedBox(height: 15,),
-             Padding(
+            SizedBox(height: 15),
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.grey.shade200
-                 
+                  color: Colors.grey.shade200,
                 ),
-                
-                child:Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset("image/googleicon - Copy.png",height:50,width: 40,),
-                    const Text("Continue with Facebook",style: TextStyle(color: Colors.grey,fontSize: 20,fontWeight: FontWeight.bold))
+                    Image.asset("image/googleicon - Copy.png", height: 50, width: 40),
+                    const Text(
+                      "Continue with Google",
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    )
                   ],
-                )
+                ),
               ),
             ),
           ],
-          
         ),
       ),
     );

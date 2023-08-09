@@ -25,7 +25,7 @@ class DealsPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.grey.shade900,
                   ),
-                  child:const  DefaultTabController(
+                  child: const DefaultTabController(
                     length: 3, // Number of tabs
                     child: Column(
                       children: [

@@ -53,7 +53,7 @@ class _RootpageState extends State<Rootpage> {
             label: 'Add',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.message,size: 30,),
+            icon: Icon(Icons.chat,size: 30,),
             label: 'message',
           ),
           BottomNavigationBarItem(
