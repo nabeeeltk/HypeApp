@@ -89,6 +89,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               LayoutBuilder(builder: (context, constraints) {
+                // ignore: unused_local_variable
                 final buttonWidth = constraints.maxWidth / 4;
 
                 return Row(
